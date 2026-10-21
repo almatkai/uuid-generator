@@ -3,8 +3,9 @@
   "name": "uuid-generator",
   "title": "UUID Generator",
   "description": "A quick way to generate UUIDs without opening the browser",
-  "icon": "command-icon.png",
+  "icon": "assets/command-icon.png",
   "author": "almatkai",
+  "categories": ["Developer Tools"],
   "contributors": [
     "GastroGeek",
     "pernielsentikaer",
