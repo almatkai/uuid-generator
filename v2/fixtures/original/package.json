@@ -1,0 +1,286 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "uuid-generator",
+  "title": "UUID Generator",
+  "description": "A quick way to generate UUIDs without opening the browser",
+  "icon": "assets/command-icon.png",
+  "author": "almatkai",
+  "categories": ["Developer Tools"],
+  "contributors": [
+    "GastroGeek",
+    "pernielsentikaer",
+    "LunaticMuch",
+    "hmarr",
+    "harsh_khandelwal",
+    "lukas-runge",
+    "ridemountainpig"
+  ],
+  "keywords": [
+    "guid",
+    "GUID"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "generate",
+      "title": "Generate UUIDs",
+      "description": "Copy generated UUIDs to the clipboard",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "numberOfUUIDsToGenerate",
+          "type": "text",
+          "placeholder": "1",
+          "required": false
+        }
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ]
+    },
+    {
+      "name": "generateV5",
+      "title": "Generate V5 UUIDs",
+      "description": "Copy generated UUIDs V5 to the clipboard",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "name",
+          "type": "text",
+          "placeholder": "UUID Name",
+          "required": true
+        },
+        {
+          "name": "numberOfUUIDsToGenerate",
+          "type": "text",
+          "placeholder": "1",
+          "required": false
+        }
+      ],
+      "preferences": [
+        {
+          "name": "uuidNamespace",
+          "type": "textfield",
+          "required": false,
+          "default": "",
+          "title": "UUID v5 Namespace",
+          "label": "Namespace",
+          "description": "The namespace for UUID v5"
+        }
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ]
+    },
+    {
+      "name": "generateV7",
+      "title": "Generate V7 UUIDs",
+      "description": "Copy generated UUIDs V7 to the clipboard",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "numberOfUUIDsToGenerate",
+          "type": "text",
+          "placeholder": "1",
+          "required": false
+        }
+      ],
+      "preferences": [
+        {
+          "name": "base32Encoding",
+          "type": "checkbox",
+          "required": false,
+          "default": false,
+          "title": "Options",
+          "label": "Base32 Encoding",
+          "description": "Should letters be Base32 encoded?"
+        }
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ]
+    },
+    {
+      "name": "generateUlid",
+      "title": "Generate ULIDs",
+      "description": "Copy generated ULIDs to the clipboard",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "numberOfULIDsToGenerate",
+          "type": "text",
+          "placeholder": "1",
+          "required": false
+        }
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ]
+    },
+    {
+      "name": "generateTypeID",
+      "title": "Generate TypeIDs",
+      "description": "Copy generated TypeIDs to the clipboard",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "prefix",
+          "placeholder": "Prefix",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "numberOfUUIDsToGenerate",
+          "type": "text",
+          "placeholder": "1",
+          "required": false
+        }
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ]
+    },
+    {
+      "name": "parseTypeID",
+      "title": "Parse TypeIDs",
+      "description": "Parse TypeID and copy resulting UUID to the clipboard",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "typeID",
+          "type": "text",
+          "placeholder": "prefix_1234567890",
+          "required": true
+        }
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ]
+    },
+    {
+      "name": "formatUuid",
+      "title": "Format UUID",
+      "description": "Format UUID without dashes into standard UUID format and copy to the clipboard",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "uuid",
+          "type": "text",
+          "placeholder": "550e8400e29b41d4a716446655440000",
+          "required": true
+        }
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ]
+    },
+    {
+      "name": "packTypeID",
+      "title": "Pack TypeID",
+      "description": "Convert a UUID to a packed Type ID with a suffix",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "suffix",
+          "type": "text",
+          "placeholder": "Suffix",
+          "required": true
+        },
+        {
+          "name": "uuid",
+          "type": "text",
+          "placeholder": "UUID",
+          "required": true
+        }
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ]
+    },
+    {
+      "name": "viewHistory",
+      "title": "View History",
+      "description": "View the UUID history",
+      "mode": "view",
+      "platforms": [
+        "macOS",
+        "Windows"
+      ]
+    }
+  ],
+  "preferences": [
+    {
+      "name": "upperCaseLetters",
+      "type": "checkbox",
+      "required": false,
+      "default": false,
+      "title": "Options",
+      "label": "Uppercase Letters",
+      "description": "Should letters be uppercased?"
+    },
+    {
+      "name": "defaultAction",
+      "description": "Set the default action",
+      "type": "dropdown",
+      "required": false,
+      "title": "Default Action",
+      "default": "copy",
+      "data": [
+        {
+          "title": "Copy",
+          "value": "copy"
+        },
+        {
+          "title": "Paste",
+          "value": "paste"
+        }
+      ]
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.104.1",
+    "typeid-js": "^1.2.0",
+    "ulidx": "^2.4.1",
+    "uuid": "^11.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "tsx": "^4.22.4",
+    "typescript": "^5.9.3",
+    "@types/uuid": "^10.0.0"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test test/*.test.ts"
+  },
+  "platforms": [
+    "macOS",
+    "Windows"
+  ],
+  "id": "com.tezbar.uuid-generator",
+  "version": "0.1.0",
+  "tezbar": {
+    "schemaVersion": 1,
+    "platforms": [
+      "macos",
+      "windows"
+    ],
+    "repository": "https://github.com/almatkai/uuid-generator",
+    "upstream": {
+      "repository": "https://github.com/raycast/extensions",
+      "path": "extensions/uuid-generator",
+      "commit": "6734d85992290066fd31a7f5bee3cca3d3545a1a"
+    },
+    "linuxStatus": "coming-soon"
+  }
+}

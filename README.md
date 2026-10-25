@@ -34,3 +34,8 @@ pnpm build
 ## Credits
 
 Adapted for Tezbar from Raycast's MIT-licensed `uuid-generator` extension at upstream commit `6734d85992290066fd31a7f5bee3cca3d3545a1a`. Original author `jmaeso` and contributors remain credited in `package.json`.
+
+
+## Rust Native V2
+
+The retained V1 is accompanied by a compiled-in Rust port. See [v2/README.md](v2/README.md) for behavior, integration and validation.

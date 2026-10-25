@@ -1,0 +1,53 @@
+{
+  "ownSource": {
+    "repository": "https://github.com/almatkai/uuid-generator",
+    "commit": "5a17980eaad254c8e95f845cd8b1002788998695",
+    "branch": "feat/native-v2-rust",
+    "behaviorTruth": "fixtures/original/src and original package-lock.json"
+  },
+  "raycast": {
+    "repository": "https://github.com/raycast/extensions",
+    "commit": "6734d85992290066fd31a7f5bee3cca3d3545a1a",
+    "path": "extensions/uuid-generator",
+    "author": "jmaeso",
+    "contributors": [
+      "GastroGeek",
+      "pernielsentikaer",
+      "LunaticMuch",
+      "hmarr",
+      "harsh_khandelwal",
+      "lukas-runge",
+      "ridemountainpig"
+    ]
+  },
+  "beta": {
+    "repository": "existing Tezbar checkout (git show only)",
+    "commit": "fd300e276356587726566026f072563eb9c34cb1",
+    "fixturesByteExact": true
+  },
+  "icon": {
+    "source": "https://raw.githubusercontent.com/raycast/extensions/6734d85992290066fd31a7f5bee3cca3d3545a1a/extensions/uuid-generator/assets/command-icon.png",
+    "bytes": 17477,
+    "sha256": "423115229079dcd49a77183284e0704df85c2ecbc9bc106e14664eaaf55d95c9",
+    "hostDestination": "src/renderer/public/extensions/icons/uuid-generator.png"
+  },
+  "verification": {
+    "macOS": "not-run",
+    "Windows": "not-run"
+  },
+  "search": {
+    "prefix": "ax-b887d80d7eaa",
+    "stateDirectory": "~/.local/share/xerj/workspaces/ax-b887d80d7eaa",
+    "coverage": "incomplete: global endpoint unavailable; bounded health/search attempts; no server restart or index process started; exhaustive rg and direct source reads used"
+  },
+  "resolvedOriginalDependencies": {
+    "node_modules/@raycast/api": "1.104.25",
+    "node_modules/uuid": "11.1.1",
+    "node_modules/typeid-js": "1.2.0",
+    "node_modules/typeid-js/node_modules/uuid": "10.0.0",
+    "node_modules/ulidx": "2.4.1",
+    "node_modules/layerr": "3.0.0",
+    "node_modules/typescript": "5.9.3",
+    "node_modules/react": "19.0.0"
+  }
+}

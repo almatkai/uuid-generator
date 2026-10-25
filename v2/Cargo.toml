@@ -1,0 +1,25 @@
+[package]
+name = "tezbar-uuid-generator-v2"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+license = "MIT AND Apache-2.0 AND Unicode-3.0 AND Unicode-DFS-2016 AND W3C-20150513 AND CC-BY-4.0 AND BSD-3-Clause AND LicenseRef-W3C-Community-Final-Specification-Agreement"
+repository = "https://github.com/almatkai/uuid-generator"
+readme = "README.md"
+description = "Offline UUID Generator engine and compiled-in Tezbar Native V2 adapter"
+include = [
+  "Cargo.toml", "Cargo.lock", "extension.json", "src/**", "adapter/**", "tests/**", "assets/**", "fixtures/**", "fixtures/original/.gitignore",
+  "oracle/**", "licenses/**", "provenance/**", "scripts/**", "*.md", "LICENSE-*", "PROVENANCE.json",
+  "validation/beta-host/src/**", "validation/headless/src/**", "validation/headless/tests/**", "validation/tauri-stub/src/**",
+  "validation/*/Cargo.template.toml", "validation/*/Cargo.lock.template", "validation/*.cjs", "validation/schema-vendor/**", "validation/schema-package*.json"
+]
+
+[dependencies]
+serde = { version = "=1.0.219", features = ["derive"] }
+serde_json = "=1.0.140"
+sha1 = "=0.10.7"
+getrandom = "=0.2.16"
+chrono = { version = "=0.4.40", default-features = false, features = ["std"] }
+
+[workspace]
+exclude = ["validation/headless", "validation/tauri-stub"]

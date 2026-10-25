@@ -1,0 +1,13 @@
+.work/
+target/
+validation/headless/Cargo.toml
+validation/headless/Cargo.lock
+validation/tauri-stub/Cargo.toml
+!fixtures/**/dist/
+!fixtures/**/dist/**
+!oracle/vendor/**/dist/
+!oracle/vendor/**/dist/**
+validation/*/Cargo.toml
+validation/*/Cargo.lock
+!validation/schema-vendor/**/dist/
+!validation/schema-vendor/**/dist/**
