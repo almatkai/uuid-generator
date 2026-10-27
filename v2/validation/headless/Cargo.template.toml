@@ -1,0 +1,15 @@
+[package]
+name = "uuid-native-v2-validation"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+[dependencies]
+uuid-beta-host-fixture = { path = "../beta-host" }
+tezbar-uuid-generator-v2 = { path = "../.." }
+serde_json = "=1.0.140"
+getrandom = "=0.2.16"
+tokio = { version = "=1.47.1", features = ["rt-multi-thread", "macros", "sync", "time"] }
+tempfile = "=3.19.1"
+log = "=0.4.27"
+tauri = { path = "../tauri-stub" }
+[workspace]

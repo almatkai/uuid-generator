@@ -1,0 +1,44 @@
+{
+  "checks": 9,
+  "rawInitial": "[{\"uuid\":\"first\",\"timestamp\":\"2023-11-14T22:13:20.000Z\",\"type\":\"uuidV4\"},{\"uuid\":\"second\",\"timestamp\":\"2023-11-14T22:13:20.000Z\",\"type\":\"uuidV7\"},{\"uuid\":\"first\",\"timestamp\":\"2023-11-14T22:13:20.000Z\",\"type\":\"uuidV4\"}]",
+  "rawAfterDelete": "[{\"uuid\":\"second\",\"timestamp\":\"2023-11-14T22:13:20.000Z\",\"type\":\"uuidV7\"}]",
+  "events": [
+    [
+      "copy",
+      "first\r\nsecond\r\nfirst"
+    ],
+    [
+      "toast",
+      "success",
+      "Copied all UUIDs to clipboard."
+    ],
+    [
+      "confirm",
+      "Clear History"
+    ],
+    [
+      "toast",
+      {
+        "style": "success",
+        "title": "History Cleared",
+        "message": "UUID history has been successfully cleared."
+      }
+    ],
+    [
+      "toast",
+      {
+        "style": "failure",
+        "title": "Error fetching history",
+        "message": "Failed to retrieve history from local storage"
+      }
+    ],
+    [
+      "toast",
+      {
+        "style": "failure",
+        "title": "Error fetching history",
+        "message": "Failed to retrieve history from local storage"
+      }
+    ]
+  ]
+}
